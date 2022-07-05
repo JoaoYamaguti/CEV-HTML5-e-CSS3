@@ -8,11 +8,21 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            height: 10000px;
         }
+
 
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th {
@@ -23,11 +33,23 @@
         thead {
             background-color: gray;
             color: white;
+
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(even)  {
+            background-color: lightgray;
         }
 
         td.num {
             text-align: right;
         }
+
     </style>
 </head>
 <body>
@@ -35,6 +57,7 @@
         <!--
             ANATOMIA PARA TABELAS GRANDES
             TABLE
+                CAPTION
                 THEAD
                     TR, TD, TH
                 TBODY
@@ -43,10 +66,13 @@
                     TR, TD, TH
         -->
     <table>
+        <caption>
+            População das Unidades Federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -65,10 +91,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>80.000.000</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur reprehenderit quas, minima asperiores laborum inventore animi est necessitatibus nesciunt consequatur placeat. Similique, beatae? Ducimus fuga corporis sed iusto excepturi maiores.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci temporibus dolorum id, vel beatae labore atque distinctio tenetur veritatis molestiae aspernatur illo? Amet molestiae officia suscipit autem ab quae tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit odit asperiores, maxime dolores in. Voluptates ducimus, ab error porro a asperiores natus perspiciatis hic ipsa, quia dignissimos obcaecati dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus veritatis repudiandae, fugiat totam sapiente rerum facere exercitationem. Accusamus, facere, magnam vero, iure at quo ex repellendus nostrum molestiae dolor beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat velit nulla dolorem, exercitationem quasi sequi amet libero quam omnis autem ullam perspiciatis distinctio. Commodi inventore doloremque officiis, sunt esse perspiciatis!</p>
 </body>
 </html>
