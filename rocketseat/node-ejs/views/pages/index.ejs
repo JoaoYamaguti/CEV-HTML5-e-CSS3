@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+    <%- include('../partials/head'); %>
+    
+    <body class="container">
+        <%- include('../partials/header')%>
+        <main>
+            <div class="jumbotron"> 
+                <h1>Node com EJS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla accusantium in, nihil esse dolores quos. Maxime nihil sequi sed ab, quasi reprehenderit doloribus laborum corporis esse, ipsa dolor facilis!</p>
+                <p>
+                    <strong> <%= subtitle%> </strong>
+                </p>
+            </div>
+            <ul>
+                <% qualitys.forEach((quality) => { %>
+                    <li>
+                        <strong><%= quality.title %></strong> <%= quality.message %>
+                    </li>
+                <% }) %>
+                <!-- <li>
+                    <strong>D</strong> Menssagem D
+                </li>
+                <li>
+                    <strong>E</strong> Menssagem E
+                </li>
+                <li>
+                    <strong>M</strong> Menssagem M
+                </li>
+                <li>
+                    <strong>A</strong> Menssagem A
+                </li> -->
+            </ul>
+        </main>
+    <%- include('../partials/footer'); %>
+</body>
+</html>
